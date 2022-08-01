@@ -78,20 +78,13 @@ namespace WebApi.AddContollers
 
                 // if(!result.IsValid)
                 //     foreach (var item in result.Errors)
-                //         Console.WriteLine("Özellik" + item.PropertyName+ " - Error Message:" + item.ErrorMessage);
-                
-
-                
+                //         Console.WriteLine("Özellik" + item.PropertyName+ " - Error Message:" + item.ErrorMessage); 
             }
 
             catch (Exception ex)
             {
-                
                 return BadRequest(ex.Message);
             }
-            
-            
-            
             return Ok();   
 
         }
@@ -100,7 +93,7 @@ namespace WebApi.AddContollers
 
         public IActionResult UpdateBook(int id, [FromBody] UpdateBookModel updatedBook)
         {
-            UpdateBookCommand command = new UpdateBookCommand(_context);
+            UpdateBookCommand command = new UpdateBookCommand(_context, _mapper);
 
             try
             {
@@ -112,7 +105,6 @@ namespace WebApi.AddContollers
             }
             catch (Exception ex)
             {
-                
                 return BadRequest(ex.Message);
             }
 
