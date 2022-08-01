@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using System;
 using System.Linq;
+using AutoMapper;
 using WebApi.DBOperations;
 using WebApi.BookOperations.GetBooks;
 using WebApi.BookOperations.CreateBook;
@@ -21,9 +22,12 @@ namespace WebApi.AddContollers
     {
         private readonly BookStoreDbContext _context;
 
-        public BookController (BookStoreDbContext context)
+        private readonly IMapper _mapper;
+
+        public BookController (BookStoreDbContext context, IMapper mapper)
         {
             _context = context;
+            _mapper = mapper;
         }
 
         // Sadece bir tane parametresiz HttpGet olabilir !
@@ -42,7 +46,7 @@ namespace WebApi.AddContollers
 
             try
             {
-                GetBookDetailQuery query = new GetBookDetailQuery(_context);
+                GetBookDetailQuery query = new GetBookDetailQuery(_context, _mapper);
                 query.BookId = id;
                 result = query.Handle();
             }
@@ -59,7 +63,7 @@ namespace WebApi.AddContollers
         [HttpPost]
         public IActionResult AddBook([FromBody] CreateBookModel newBook)
         {
-            CreateBookCommand command = new CreateBookCommand(_context);
+            CreateBookCommand command = new CreateBookCommand(_context, _mapper);
             
             try
             {
