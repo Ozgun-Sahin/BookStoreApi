@@ -4,17 +4,14 @@ using System;
 using System.Linq;
 using AutoMapper;
 using WebApi.DBOperations;
-using WebApi.BookOperations.GetBooks;
-using WebApi.BookOperations.CreateBook;
-using WebApi.BookOperations.UpdateBook;
-using WebApi.BookOperations.GetBookDetail;
-using static WebApi.BookOperations.CreateBook.CreateBookCommand;
-using static WebApi.BookOperations.UpdateBook.UpdateBookCommand;
 using FluentValidation.Results;
 using FluentValidation;
-
-
-
+using WebApi.Application.BookOperations.Queries.GetBooks;
+using WebApi.Application.BookOperations.Queries.GetBookDetail;
+using WebApi.Application.BookOperations.Commands.CreateBook;
+using static WebApi.Application.BookOperations.Commands.CreateBook.CreateBookCommand;
+using static WebApi.Application.BookOperations.Commands.UpdateBook.UpdateBookCommand;
+using WebApi.Application.BookOperations.Commands.UpdateBook;
 
 namespace WebApi.AddContollers
 {

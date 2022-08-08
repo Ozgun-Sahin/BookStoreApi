@@ -4,8 +4,9 @@ using System;
 using System.Linq;
 using WebApi.DBOperations;
 using WebApi.Common;
+using WebApi.Entities;
 
-namespace WebApi.BookOperations.GetBooks
+namespace WebApi.Application.BookOperations.Queries.GetBooks
 {
     public class GetBooksQuery
     {
