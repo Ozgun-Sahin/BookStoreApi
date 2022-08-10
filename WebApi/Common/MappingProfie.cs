@@ -4,6 +4,7 @@ using static WebApi.Application.BookOperations.Commands.CreateBook.CreateBookCom
 using WebApi.Application.BookOperations.Queries.GetBookDetail;
 using static WebApi.Application.BookOperations.Commands.UpdateBook.UpdateBookCommand;
 using static WebApi.Application.GenreOperations.Queries.GetGenres.GetGenresQuery;
+using static WebApi.Application.GenreOperations.Queries.GetGenreDetail.GetGenreDetailQurey;
 
 namespace WebApi.Common
 {
@@ -16,7 +17,7 @@ namespace WebApi.Common
             CreateMap<UpdateBookModel, Book>().ForMember(dest => dest.GenreId, opts => opts.MapFrom(src =>src.GenreId));
             CreateMap<UpdateBookModel, Book>().ForMember(dest => dest.Title, opts => opts.MapFrom(src =>src.Title));
             CreateMap<Genre, GenresViewModel>();
-
+            CreateMap<Genre, GenreDetailViewModel>();
         }
     }
 }
