@@ -19,16 +19,36 @@ namespace WebApi.DBOperations
 
                 context.Genres.AddRange(
                     new Genre{
-                        Name = "Personal Growth"
+                        Name = "Horror"
 
                     },
                     new Genre{
-                        Name = "Science Fiction"
+                        Name = "Graphic Novel"
 
                     },
                     new Genre{
-                        Name = "Romance"
+                        Name = "Sci-fi"
 
+                    }
+                );
+
+                context.Authors.AddRange(
+                    new Author{
+                        Name = "Stephen",
+                        Surname ="King",
+                        DateOfBirth = new DateTime(1947,09,21)
+                    },
+
+                    new Author{
+                        Name = "Nail",
+                        Surname ="Gaiman",
+                        DateOfBirth = new DateTime(1960,11,10)
+                    },
+
+                    new Author{
+                        Name = "Aldous",
+                        Surname ="Huxley",
+                        DateOfBirth = new DateTime(1894,07,26)
                     }
                 );
                     
@@ -36,28 +56,31 @@ namespace WebApi.DBOperations
                     new Book 
                     {
                         //Id = 1,
-                        Title = "Lean Startup",
+                        Title = "Hayvan Mezarlığı",
                         GenreId = 1, 
                         PageCount = 200,
-                        PublishDate = new DateTime(2001,06,12)
+                        PublishDate = new DateTime(2001,06,12),
+                        AuthorId = 1
                     },
 
                     new Book 
                     {
                         //Id = 2,
-                        Title = "Herland",
+                        Title = "Sandman",
                         GenreId = 2, 
                         PageCount = 250,
-                        PublishDate = new DateTime(2020,05,23)
+                        PublishDate = new DateTime(2020,05,23),
+                        AuthorId = 2
                     },
 
                     new Book 
                     {
                         //Id = 3,
-                        Title = "Dune",
+                        Title = "Brave New World",
                         GenreId = 2,
                         PageCount = 540,
-                        PublishDate = new DateTime(2001,12,21)
+                        PublishDate = new DateTime(2001,12,21),
+                        AuthorId =3
                     }
 
                 );
