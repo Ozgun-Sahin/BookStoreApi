@@ -11,18 +11,18 @@ namespace WebApi.Application.BookOperations.Commands.UpdateBook
     public class UpdateBookCommand
     {
         public UpdateBookModel Model {get; set;}
-        private readonly BookStoreDbContext _dbContext;
+        private readonly IBookStoreDbContext _dbContext;
         private readonly IMapper _mapper;
 
         public int BookId {get; set;}
 
-        public UpdateBookCommand(BookStoreDbContext dbContext, IMapper mapper)
+        public UpdateBookCommand(IBookStoreDbContext dbContext, IMapper mapper)
         {
             _dbContext = dbContext;
             _mapper = mapper;
         }
 
-        public async void Handle()
+        public void Handle()
         {
             var book = _dbContext.Books.SingleOrDefault(x=> x.Id == BookId);
 
@@ -37,7 +37,8 @@ namespace WebApi.Application.BookOperations.Commands.UpdateBook
             // book.Title = Model.Title != default ? Model.Title: book.Title;
             // //book.PublishDate = Model.PublishDate != default ? Model.PublishDate: book.PublishDate;
 
-            await _dbContext.SaveChangesAsync();
+            //await _dbContext.SaveChangesAsync(); * async ekle
+            _dbContext.SaveChanges();
         }
 
         public class UpdateBookModel
