@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ozgun\\Desktop\\Pratikler\\BookStore\\Tests\\WebApi.UnitTests\\WebApi.UnitTests.csproj": {}
+    "c:\\Users\\ozgun\\Desktop\\Pratikler\\BookStore\\Tests\\WebApi.UnitTests\\WebApi.UnitTests.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ozgun\\Desktop\\Pratikler\\BookStore\\Tests\\WebApi.UnitTests\\WebApi.UnitTests.csproj": {
+    "c:\\Users\\ozgun\\Desktop\\Pratikler\\BookStore\\Tests\\WebApi.UnitTests\\WebApi.UnitTests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ozgun\\Desktop\\Pratikler\\BookStore\\Tests\\WebApi.UnitTests\\WebApi.UnitTests.csproj",
+        "projectUniqueName": "c:\\Users\\ozgun\\Desktop\\Pratikler\\BookStore\\Tests\\WebApi.UnitTests\\WebApi.UnitTests.csproj",
         "projectName": "WebApi.UnitTests",
-        "projectPath": "C:\\Users\\ozgun\\Desktop\\Pratikler\\BookStore\\Tests\\WebApi.UnitTests\\WebApi.UnitTests.csproj",
+        "projectPath": "c:\\Users\\ozgun\\Desktop\\Pratikler\\BookStore\\Tests\\WebApi.UnitTests\\WebApi.UnitTests.csproj",
         "packagesPath": "C:\\Users\\ozgun\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ozgun\\Desktop\\Pratikler\\BookStore\\Tests\\WebApi.UnitTests\\obj\\",
+        "outputPath": "c:\\Users\\ozgun\\Desktop\\Pratikler\\BookStore\\Tests\\WebApi.UnitTests\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ozgun\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,8 +28,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\ozgun\\Desktop\\Pratikler\\BookStore\\WebApi\\WebApi.csproj": {
-                "projectPath": "C:\\Users\\ozgun\\Desktop\\Pratikler\\BookStore\\WebApi\\WebApi.csproj"
+              "c:\\Users\\ozgun\\Desktop\\Pratikler\\BookStore\\WebApi\\WebApi.csproj": {
+                "projectPath": "c:\\Users\\ozgun\\Desktop\\Pratikler\\BookStore\\WebApi\\WebApi.csproj"
               }
             }
           }
@@ -47,6 +47,14 @@
             "FluentAssertions": {
               "target": "Package",
               "version": "[6.7.0, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.6, )"
+            },
+            "Microsoft.EntityFrameworkCore.InMemory": {
+              "target": "Package",
+              "version": "[5.0.6, )"
             },
             "Microsoft.NET.Test.Sdk": {
               "target": "Package",
@@ -93,14 +101,14 @@
         }
       }
     },
-    "C:\\Users\\ozgun\\Desktop\\Pratikler\\BookStore\\WebApi\\WebApi.csproj": {
+    "c:\\Users\\ozgun\\Desktop\\Pratikler\\BookStore\\WebApi\\WebApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ozgun\\Desktop\\Pratikler\\BookStore\\WebApi\\WebApi.csproj",
+        "projectUniqueName": "c:\\Users\\ozgun\\Desktop\\Pratikler\\BookStore\\WebApi\\WebApi.csproj",
         "projectName": "WebApi",
-        "projectPath": "C:\\Users\\ozgun\\Desktop\\Pratikler\\BookStore\\WebApi\\WebApi.csproj",
+        "projectPath": "c:\\Users\\ozgun\\Desktop\\Pratikler\\BookStore\\WebApi\\WebApi.csproj",
         "packagesPath": "C:\\Users\\ozgun\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ozgun\\Desktop\\Pratikler\\BookStore\\WebApi\\obj\\",
+        "outputPath": "c:\\Users\\ozgun\\Desktop\\Pratikler\\BookStore\\WebApi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ozgun\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -140,6 +148,10 @@
             "FluentValidation": {
               "target": "Package",
               "version": "[10.1.0, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[5.0.8, )"
             },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
